@@ -1,1 +1,1 @@
-Контрольная 1.html
+https://irmaklimova.github.io/Web-technologies/
