@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Решение алгоритмической задачи</title>
+    <!-- Подключение Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+          crossorigin="anonymous">
+    <!-- Подключение собственного CSS -->
+    <link rel="stylesheet" href="irelandstyle.css">
+    
+    <!-- Подключение Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+
+
+
+
+</head>
+<body>
+
+    <div class="header">
+        <h1>Добро пожаловать в Ирландию</h1>
+    </div>
+    
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Ирландия</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="Контрольная 1.html">Дублин</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Контрольная 1.html">Утес Мохер</a>
+    
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Контрольная 1.html">Лох-Корриб</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Контрольная 1.html">Контакты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Контрольная 1.html">Форма Данных</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Контрольная 1.html" >Полезные ресурсы</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Решение алгоритмической.html">Задача</a>
+                      </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Изменяем кириллицу на латиницу по клику.html" >Паспорт</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+   
+    <h3 align="center">Решение алгоритмической задачи</h3>
+    <h5> 1017. Дано вещественное число A. Вычислить x = a**4, при a < 10; x = a при a > 61, в противном случае x  = a − sin(a**2)).</h4>
+    <p>Введите значение A: <input type="number" id="inputA" value="0"></p>
+    <button id="calculate">Вычислить</button>
+    
+    <p>Результат: <span id="result"></span></p>
+    <p><a href="Решение задачи с отправкой на сервер.html" target="_blank"> Ссылка на решение задачи с отправкой на сервер </a></p>
+
+    <script>
+        document.getElementById("calculate").addEventListener("click", function() {
+            
+            let a = parseFloat(document.getElementById("inputA").value);
+            let x;
+
+            if (a < 10) {
+                x = Math.pow(a, 4); // a ** 4
+            } else if (a > 61) {
+                x = a; 
+            } else {
+                x = a - Math.sin(Math.pow(a, 2)); // x = a - sin(a ** 2)
+            }
+
+            
+            document.getElementById("result").textContent = x;
+        });
+    </script>
+
+</body>
+</html>
